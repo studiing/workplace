@@ -10,11 +10,10 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by Volodymyr_Zaverukha on 11/16/2016.
  */
-@DefaultUrl("https://epuakyiw0699.kyiv.epam.com/CWPTEST")
+//@DefaultUrl("https://epuakyiw0699.kyiv.epam.com/CWPTEST")
+//@DefaultUrl("https://ecsd001006a8.epam.com/CWPTEST/")
+    //@DefaultUrl("#HOST")
 public class MainPage extends WebPage {
-
-    @FindBy(xpath = ".//div[@class='navigation']")
-    private HeaderFragment header;
 
     @FindBy(xpath = ".//button[@ng-click='login()']")
     private WebElementFacade loginWithSSOButton;
@@ -23,9 +22,6 @@ public class MainPage extends WebPage {
         super(driver);
     }
 
-    public HeaderFragment getHeader() {
-        return header;
-    }
     public WebElementFacade getLoginWithSSOButton() {
         return loginWithSSOButton;
     }
