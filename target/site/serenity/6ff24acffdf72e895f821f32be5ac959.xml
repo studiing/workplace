@@ -1,0 +1,72 @@
+<acceptance-test-run title="Sign in" name="Sign in" description="" steps="4" successful="3" failures="0" errors="1" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="14100" timestamp="2016-11-18T11:28:06.427+02:00" session-id="26f4170865f3ddc082eb9bbb08f76a55">
+  <user-story id="user-logs-in" name="User logs in" path="Login.feature"/>
+  <tags>
+    <tag name="General" type="capability"/>
+    <tag name="General/User logs in" type="feature"/>
+    <tag name="User logs in" type="feature"/>
+  </tags>
+  <test-group name="Given user is on the home page" result="SUCCESS">
+    <screenshots>
+      <screenshot image="ed046dcdb20304fd230eda58546ced51.png"/>
+      <screenshot image="6451ee17761aa4e606645197abc774c1.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="1433">
+      <screenshots>
+        <screenshot image="ed046dcdb20304fd230eda58546ced51.png"/>
+        <screenshot image="6451ee17761aa4e606645197abc774c1.png"/>
+      </screenshots>
+      <description>Open main page</description>
+    </test-step>
+  </test-group>
+  <test-group name="When user logs in with EPAM LOGIN" result="SUCCESS">
+    <screenshots>
+      <screenshot image="c1334baf3a879f560d52de27b493ccc3.png"/>
+    </screenshots>
+    <test-step result="SUCCESS" duration="845">
+      <screenshots>
+        <screenshot image="c1334baf3a879f560d52de27b493ccc3.png"/>
+      </screenshots>
+      <description>Login with SSO</description>
+    </test-step>
+  </test-group>
+  <test-step result="SUCCESS" duration="299">
+    <screenshots>
+      <screenshot image="c1334baf3a879f560d52de27b493ccc3.png"/>
+    </screenshots>
+    <description>Then people tab is opened</description>
+  </test-step>
+  <test-group name="And user sees &quot;Hello&quot; greeting" result="ERROR">
+    <screenshots>
+      <screenshot image="c1334baf3a879f560d52de27b493ccc3.png"/>
+    </screenshots>
+    <test-step result="ERROR" duration="6510">
+      <screenshots>
+        <screenshot image="c1334baf3a879f560d52de27b493ccc3.png" source="pagesource5313552868143624665.html.txt"/>
+      </screenshots>
+      <description>Account menu text</description>
+      <error>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//div[@class=&apos;navigation&apos;]&quot;}
+  (Session info: chrome=54.0.2840.99)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;EPUAKYIW2784&apos;, ip: &apos;10.17.185.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\VOLODY~1\AppData\Local\Temp\scoped_dir2012_7072}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 26f4170865f3ddc082eb9bbb08f76a55
+*** Element info: {Using=xpath, value=.//div[@class=&apos;navigation&apos;]}</error>
+      <exception>org.openqa.selenium.NoSuchElementException:no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//div[@class=&apos;navigation&apos;]&quot;}
+  (Session info: chrome=54.0.2840.99)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;EPUAKYIW2784&apos;, ip: &apos;10.17.185.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\VOLODY~1\AppData\Local\Temp\scoped_dir2012_7072}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 26f4170865f3ddc082eb9bbb08f76a55
+*** Element info: {Using=xpath, value=.//div[@class=&apos;navigation&apos;]}&#xd;
+[com.workplace.steps.serenity.MainPageSteps.accountMenuText(MainPageSteps.java:28), com.workplace.steps.cucumber.MainPageStepsDefinition.userSeesGreeting(MainPageStepsDefinition.java:40)]</exception>
+    </test-step>
+  </test-group>
+</acceptance-test-run>

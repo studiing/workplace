@@ -1,0 +1,13 @@
+com\pipec\DefinitionTestSuite.class
+com\pipec\fragments\HeaderFragment.class
+com\pipec\pages\DictionaryPage.class
+com\pipec\pages\MainPage.class
+com\pipec\pages\People.class
+com\pipec\steps\cucumber\DefinitionSteps.class
+com\pipec\steps\serenity\EndUserSteps.class
+com\pipec\steps\serenity\MainPageSteps.class
+com\pipec\fragments\HeaderFragmentImpl.class
+com\pipec\steps\cucumber\Hooks.class
+com\pipec\pages\WebPage.class
+com\pipec\pages\DictionaryPage$1.class
+com\pipec\steps\cucumber\MainPageStepsDefinition.class
