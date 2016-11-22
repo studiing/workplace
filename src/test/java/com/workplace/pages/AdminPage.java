@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import sun.awt.windows.WEmbeddedFrame;
+
 import java.lang.*;
 
 /**
@@ -16,7 +18,7 @@ public class AdminPage extends WebPage {
     public AdminPage(WebDriver driver) {
         super(driver);
     }
-    public static final String FORMATED_XPATH =
+    public static final String FORMATED_XPATH_DIRECTION =
             ".//table[@id='cwp-admin-directions-table']//tr/*[contains(text(), '%s')]/..//input";
 
     @FindBy(xpath = ".//li[@id='adminTopMenuItem']")
@@ -49,10 +51,10 @@ public class AdminPage extends WebPage {
         return editDirectionsSubcategory;
     }
 
-    public WebElement getCheckbox(String direction) {
-        WebElement checkbox = this.getDriver().findElement(By.xpath(String.format(FORMATED_XPATH, direction)));
+    public WebElementFacade getDirectionCheckbox(String name) {
+        WebElementFacade element = getElementByContent(FORMATED_XPATH_DIRECTION, name);
 
-        return checkbox;
+        return element;
     }
 
     public WebElementFacade getMakeActiveButton() {

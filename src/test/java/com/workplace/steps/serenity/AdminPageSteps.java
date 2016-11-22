@@ -29,7 +29,7 @@ public class AdminPageSteps {
 
     @Step
     public void chooseDirection(String direction) {
-        adminPage.getCheckbox(direction).click();
+        adminPage.getDirectionCheckbox(direction).click();
     }
 
     @Step
