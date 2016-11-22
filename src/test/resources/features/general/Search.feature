@@ -14,11 +14,12 @@ Feature: Admin search for students
 
     Examples:
     | name      | amount|
-    | Viktoriia | 1     |
     | Anna      | 2     |
     | Naidonov  | 1     |
     | FORD      | 1     |
     | jhgkjvv   | 0     |
     | DVBEASF   | 0     |
+    | Ab DF As  | 0     |
+    | An Kurylo | 1     |
 
 
