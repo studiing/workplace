@@ -2,16 +2,20 @@ package com.workplace.steps.cucumber;
 
 import com.workplace.steps.serenity.AdminPageSteps;
 import com.workplace.steps.serenity.PeoplePageSteps;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.Steps;
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.Matcher;
+import org.junit.Assert;
 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
 
 /**
  * Created by Viktoriia_Marynchak on 11/21/2016.
@@ -58,4 +62,29 @@ public class AdminPageStepsDefinitions {
         String[] directions = message.split(", ");
         assertThat(adminPageSteps.getText(), is(equalTo(message)));
     }
+
+    @And("^on Edit employees subcategory$")
+    public void onEditEmployeesSubcategory() throws Throwable {
+        adminPageSteps.goToEditEmployeeSubcategory();
+    }
+
+    @When("^admin picks '(.*)'$")
+    public void adminPicksEmployee(String employee) throws Throwable {
+        adminPageSteps.pickEmployee(employee);
+
+    }
+
+    @And("^changes role to Manager$")
+    public void changesRoleToManager() throws Throwable {
+        adminPageSteps.clickMakeManagerButton();
+        adminPageSteps.clickYesButton();
+        adminPageSteps.clickOkButton();
+    }
+
+    @Then("^'(.*)'s role is changed to (.*)$")
+    public void employeeSRoleIsChangedToManagerRole(String employee, String role) throws Throwable {
+        assertThat(adminPageSteps.checkRole(employee), CoreMatchers.containsString(role));
+    }
+
+
 }

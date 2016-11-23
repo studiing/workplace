@@ -1,4 +1,3 @@
-@t
 Feature: Change Direction state
   In order to use site functionality
   As an EPAM admin

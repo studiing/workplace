@@ -51,4 +51,42 @@ public class AdminPageSteps {
     public boolean isNotificationWindowPresent() {
         return adminPage.element(adminPage.getNotificationWindow()).isPresent();
     }
+
+    @Step
+    public void goToEditEmployeeSubcategory() {
+        adminPage.getAdminTab().click();
+        //adminPage.getPeopleCategory().click();
+        adminPage.getEditEmployeeSubcategory().click();
+    }
+
+    @Step
+    public void pickEmployee(String employee) {
+        adminPage.getEmployeeCheckbox(employee).click();
+    }
+
+    @Step
+    public void clickMakeManagerButton(){
+        adminPage.getMakeManagerButton().click();
+    }
+
+    @Step
+    public void clickYesButton(){
+        adminPage.getYesButton().click();
+    }
+
+    @Step
+    public void clickOkButton(){
+        adminPage.getOkButton().click();
+    }
+
+    @Step
+    public String checkRole(String employee){
+        return adminPage.getRole(employee).getText();
+    }
+
+
+
+
+
+
 }

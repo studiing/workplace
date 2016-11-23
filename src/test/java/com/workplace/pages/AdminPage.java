@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.yecht.Data;
 import sun.awt.windows.WEmbeddedFrame;
 
 import java.lang.*;
@@ -19,7 +20,9 @@ public class AdminPage extends WebPage {
         super(driver);
     }
     public static final String FORMATED_XPATH_DIRECTION =
-            ".//table[@id='cwp-admin-directions-table']//tr/*[contains(text(), '%s')]/..//input";
+            ".//tr[contains(., '%s')]//input";
+    public static final String FORMATED_XPATH_EMPLOYEE = "//table[contains(@class, 'fixed-header-table')]//tr/td[contains(text(), '%s')]/../td/input";
+    public static final String FORMATED_XPATH_EMPLOYEE_ROLE = "//table[contains(@class, 'fixed-header-table')]//td[contains(text(), '%s')]/..";
 
     @FindBy(xpath = ".//li[@id='adminTopMenuItem']")
     private WebElementFacade adminTab;
@@ -29,6 +32,21 @@ public class AdminPage extends WebPage {
 
     @FindBy(xpath = ".//li[@id='adminDirectionsSubmenu']")
     private WebElementFacade editDirectionsSubcategory;
+
+    @FindBy(xpath = ".//li[@id='adminEmployeesSubmenu']")
+    private WebElementFacade editEmployeeSubcategory;
+
+    @FindBy(xpath = "//button[text()='Make manager']")
+    private WebElementFacade makeManagerButton;
+
+    @FindBy(xpath = "//button[@aria-label='No']")
+    private WebElementFacade noButton;
+
+    @FindBy(xpath = "//button[@aria-label='Yes']")
+    private WebElementFacade yesButton;
+
+    @FindBy(xpath = "//button[@aria-label='OK']")
+    private WebElementFacade okButton;
 
     @FindBy(xpath = ".//button[contains(text(), 'Make active')]")
     private WebElementFacade makeActiveButton;
@@ -51,11 +69,29 @@ public class AdminPage extends WebPage {
         return editDirectionsSubcategory;
     }
 
+    public WebElementFacade getEditEmployeeSubcategory() {
+        return editEmployeeSubcategory;
+    }
+
     public WebElementFacade getDirectionCheckbox(String name) {
         WebElementFacade element = getElementByContent(FORMATED_XPATH_DIRECTION, name);
 
         return element;
     }
+
+    public WebElementFacade getEmployeeCheckbox(String name) {
+        WebElementFacade element = getElementByContent(FORMATED_XPATH_EMPLOYEE, name);
+        return element;
+    }
+
+    public WebElementFacade
+
+    getRole(String name){
+        WebElementFacade element = getElementByContent(FORMATED_XPATH_EMPLOYEE_ROLE, name);
+        return element;
+    }
+
+
 
     public WebElementFacade getMakeActiveButton() {
         return makeActiveButton;
@@ -67,5 +103,21 @@ public class AdminPage extends WebPage {
 
     public WebElementFacade getNotificationWindow() {
         return notificationWindow;
+    }
+
+    public WebElementFacade getMakeManagerButton() {
+        return makeManagerButton;
+    }
+
+    public WebElementFacade getNoButton() {
+        return noButton;
+    }
+
+    public WebElementFacade getYesButton() {
+        return yesButton;
+    }
+
+    public WebElementFacade getOkButton() {
+        return okButton;
     }
 }
